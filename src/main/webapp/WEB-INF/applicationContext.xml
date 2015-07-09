@@ -5,21 +5,23 @@
          
     <import resource="datasource-config.xml"/>
     <import resource="webflow-config.xml"/>
+    <import resource="security-config.xml" />
+    
    
     
         
         
-        <!-- DAO declarations 
+        <!-- DAO declarations  -->
         <bean id="userDao" class="com.example.j2eeapp.dao.UserJpaDao" />
-        -->
-        <!-- Services declarations
+       
+        <!-- Services declarations -->
         <bean id="userService" class="com.example.j2eeapp.services.impl.UserServiceImpl">
                 <property name="userDao" ref="userDao" />
         </bean>
 
-        <bean id="userAuthenticationProviderService" class="com.example.j2eeapp.services.impl.UserAuthenticationProviderServiceImpl">
+       <bean id="userAuthenticationProviderService" class="com.example.j2eeapp.services.impl.UserAutheticationProviderServiceImpl">
                 <property name="authenticationManager" ref="authenticationManager" />
-        </bean>
-         -->
+        </bean> 
+         
         
 </beans>
